@@ -22,6 +22,18 @@ body:after{content:"";position:fixed;inset:0;z-index:-2;background:linear-gradie
 .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none}.hero-video::-webkit-media-controls{display:none!important}
 .hero-video-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(2,9,20,.24),rgba(2,9,20,.40) 55%,rgba(2,9,20,.66))}
 
+/* ClassyHeels-style limited-time offer marquee */
+.hero-marquee{position:absolute;top:76px;left:0;width:100%;overflow:hidden;white-space:nowrap;z-index:5;padding:15px 0;background:linear-gradient(100deg,rgba(5,20,43,.96),rgba(18,64,112,.96) 30%,rgba(9,28,58,.97) 65%,rgba(5,20,43,.96));border-top:1px solid rgba(255,220,145,.7);border-bottom:1px solid rgba(112,190,255,.65);box-shadow:0 7px 28px rgba(0,0,0,.36),0 0 22px rgba(75,157,255,.22)}
+.marquee-track{display:flex;width:max-content;animation:marquee-scroll 34s linear infinite}
+.marquee-copy{display:flex;align-items:center;gap:16px;padding-right:24px;font-size:clamp(16px,1.7vw,22px);font-weight:850;letter-spacing:.025em;text-transform:none;color:#f7fbff;text-shadow:0 2px 10px rgba(0,0,0,.55)}
+.marquee-copy strong{color:#fff2c6;text-shadow:0 0 13px rgba(255,203,103,.42)}
+.marquee-copy b{color:#07182e;background:linear-gradient(100deg,#fff0b8,#ffc95c,#fff0b8);padding:6px 12px;border-radius:7px;font-size:1.08em;text-shadow:none;box-shadow:0 0 18px rgba(255,194,79,.3)}
+.marquee-copy span{color:#bfe2ff}
+.marquee-copy em{font-style:normal;color:#ffcf72;font-weight:950}
+@keyframes marquee-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:720px){.hero-marquee{top:65px;padding:13px 0}.marquee-copy{font-size:16px;gap:12px;letter-spacing:0}.marquee-copy b{padding:6px 9px}.marquee-track{animation-duration:42s}}
+
+
 .hero-inner{max-width:1040px;position:relative;z-index:2}
 .eyebrow{font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:#9fc8ff;margin-bottom:22px;animation:rise .9s ease both}
 h1{font-size:clamp(56px,11vw,150px);line-height:.9;letter-spacing:-.055em;font-weight:900;background:linear-gradient(100deg,#fff 10%,#9bc9ff 48%,#fff 78%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 55px rgba(88,163,255,.14);animation:rise 1s .1s ease both}
@@ -194,6 +206,12 @@ hr,.divider{
     <source src="hero-video.mp4" type="video/mp4">
   </video>
   <div class="hero-video-overlay"></div>
+<div class="hero-marquee" aria-label="Limited time domain offer">
+<div class="marquee-track">
+<div class="marquee-copy">🚗 <strong>LIMITED-TIME EXCLUSIVE OFFER!</strong> <span>Own This Premium Domain for</span> <b>Just $4,999!</b> 🏆 <em>Premium Automotive &amp; Mobility Domain!</em> ⏳ <span>Don't Miss Out! Secure Vehikal.com for Your Next Big Brand.</span> 🌐 <strong>Contact the Seller Below to Acquire It Today!</strong></div>
+<div class="marquee-copy" aria-hidden="true">🚗 <strong>LIMITED-TIME EXCLUSIVE OFFER!</strong> <span>Own This Premium Domain for</span> <b>Just $4,999!</b> 🏆 <em>Premium Automotive &amp; Mobility Domain!</em> ⏳ <span>Don't Miss Out! Secure Vehikal.com for Your Next Big Brand.</span> 🌐 <strong>Contact the Seller Below to Acquire It Today!</strong></div>
+</div>
+</div>
   <div class="glow-orb"></div>
   <div class="hero-inner">
     <div class="premium-sale-tag">This Domain Is For Sale</div>
